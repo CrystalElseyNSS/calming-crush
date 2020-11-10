@@ -2,13 +2,12 @@
   background-color: white;
   border: 1px outset whitesmoke;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
   display: flex;
   flex-wrap: wrap;
-  height: 90vw;
+  height: 88vw;
   margin: auto;
-  padding: 5px;
-  width: 90vw;
+  padding: 3px;
+  width: 88vw;
 }
 
 .grid div {
@@ -26,7 +25,8 @@
   width: 100%;
 }
 
-.score {
+#score {
+  color: whitesmoke;
   font-family: "Montserrat", sans-serif;
   font-size: 2vw;
   text-transform: uppercase;
@@ -35,12 +35,10 @@
 .score-board {
   background-color: #0432FF;
   border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
-  color: whitesmoke;
-  height: 10vw;
-  line-height: 10vw;
-  left: 80%;
+  height: 30vw;
+  line-height: 30vw;
+  left: 35%;
   position: relative;
   text-align: center;
-  width: 20vw;
+  width: 30vw;
 }
