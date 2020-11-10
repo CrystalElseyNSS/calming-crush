@@ -28,12 +28,12 @@
 #instructions {
   color: whitesmoke;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 6vw;
+  font-size: 5vw;
   font-weight: bold;
   margin: auto;
   margin-top: 5%;
   text-align: center;
-  width: 80%;
+  width: 88%;
 }
 
 #score {
