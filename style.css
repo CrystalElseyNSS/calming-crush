@@ -5,10 +5,10 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
   display: flex;
   flex-wrap: wrap;
-  height: 80vw;
+  height: 90vw;
   margin: auto;
   padding: 5px;
-  width: 80vw;
+  width: 90vw;
 }
 
 .grid div {
@@ -28,6 +28,7 @@
 
 .score {
   font-family: "Montserrat", sans-serif;
+  font-size: 2vw;
   text-transform: uppercase;
 }
 
@@ -41,5 +42,5 @@
   left: 80%;
   position: relative;
   text-align: center;
-  width: 10vw;
+  width: 20vw;
 }
