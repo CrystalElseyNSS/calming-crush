@@ -25,11 +25,22 @@
   width: 100%;
 }
 
+#instructions {
+  color: whitesmoke;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 4vw;
+  font-weight: bold;
+  margin: auto;
+  margin-top: 5%;
+  text-align: center;
+  width: 80%;
+}
+
 #score {
   color: whitesmoke;
-  font-family: "Montserrat", sans-serif;
-  font-size: 2vw;
-  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12vw;
+  font-weight: bolder;
 }
 
 .score-board {
@@ -38,6 +49,7 @@
   height: 30vw;
   line-height: 30vw;
   left: 35%;
+  margin-top: -5%;
   position: relative;
   text-align: center;
   width: 30vw;
