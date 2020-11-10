@@ -7,16 +7,12 @@
   flex-wrap: wrap;
   height: 80vw;
   margin: auto;
-  min-height: 400px;
-  min-width: 400px;
   padding: 5px;
   width: 80vw;
 }
 
 .grid div {
   height: 12.5%;
-  min-height: 50px;
-  min-width: 50px;
   width: 12.5%;
 }
 
@@ -43,8 +39,6 @@
   height: 10vw;
   line-height: 10vw;
   left: 80%;
-  min-height: 50px;
-  min-width: 50px;
   position: relative;
   text-align: center;
   width: 10vw;
