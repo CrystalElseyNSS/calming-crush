@@ -1,63 +1,51 @@
 .grid {
-    height: 560px;
-    min-width: 560px;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 200px;
-    margin-top: 25px;
-    background-color: rgba(109, 127, 151, 0.5);
-    padding:5px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
-    color: #85796b;
+  background-color: white;
+  border: 1px outset whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
+  display: flex;
+  flex-wrap: wrap;
+  height: 80vw;
+  margin: auto;
+  min-height: 400px;
+  min-width: 400px;
+  padding: 5px;
+  width: 80vw;
 }
 
 .grid div {
-    height: 70px;
-    width: 70px;
+  height: 12.5%;
+  min-height: 50px;
+  min-width: 50px;
+  width: 12.5%;
 }
 
-.grid div img {
-    height: 70px;
-    width: 70px;
-}
-
-h3 {
- font-family: "Montserrat", sans-serif;
- text-transform: uppercase;
-}
-
-h1 {
- font-family: "Montserrat", sans-serif;
- text-transform: uppercase;
- margin-top: -10px;
-}
-
-.invisible {
-    background-color: white;
-}
-
-body {
-  background-image: url("images/background.jpg");
-  background-size: contain;
+.color {
+  background-size: cover;
   background-repeat: no-repeat;
-  max-width: 100vh;
-  min-width: 800px;
-  display: flex;
+}
+
+.color img {
+  height: 100%;
+  width: 100%;
+}
+
+.score {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
 }
 
 .score-board {
-  border-radius: 10px;
-  margin-top: 200px;
-  margin-left: 200px;
-  margin-bottom: 350px;
-  min-width: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  background-color: #48B0E3;
+  background-color: #0432FF;
+  border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
   color: whitesmoke;
+  height: 10vw;
+  line-height: 10vw;
+  left: 80%;
+  min-height: 50px;
+  min-width: 50px;
+  position: relative;
+  text-align: center;
+  width: 10vw;
 }

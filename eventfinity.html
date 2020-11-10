@@ -1,4 +1,66 @@
-document.addEventListener('DOMContentLoaded', () => {
+<style>
+    .grid {
+  background-color: white;
+  border: 1px outset whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
+  display: flex;
+  flex-wrap: wrap;
+  height: 80vw;
+  margin: auto;
+  min-height: 400px;
+  min-width: 400px;
+  padding: 5px;
+  width: 80vw;
+}
+
+.grid div {
+  height: 12.5%;
+  min-height: 50px;
+  min-width: 50px;
+  width: 12.5%;
+}
+
+.color {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.color img {
+  height: 100%;
+  width: 100%;
+}
+
+.score {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+
+.score-board {
+  background-color: #0432FF;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
+  color: whitesmoke;
+  height: 10vw;
+  line-height: 10vw;
+  left: 80%;
+  min-height: 50px;
+  min-width: 50px;
+  position: relative;
+  text-align: center;
+  width: 10vw;
+}
+</style>
+
+<section>
+    <div class="grid"></div>
+    <div class="score-board">
+      <h2 id="score"></h2>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.grid')
   const scoreDisplay = document.getElementById('score')
   const width = 8
@@ -171,3 +233,4 @@ document.addEventListener('DOMContentLoaded', () => {
     moveIntoSquareBelow()
   }, 100);
 })
+</script>
