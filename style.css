@@ -1,18 +1,27 @@
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100vw;
+}
+
 .grid {
   background-color: white;
   border: 1px outset whitesmoke;
   border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
-  height: 88vw;
-  margin: auto;
+  height: 50vw;
   padding: 3px;
-  width: 88vw;
+  width: 50vw;
 }
 
 .grid div {
   height: 12.5%;
   width: 12.5%;
+}
+
+.info {
+  width: 50vw;
 }
 
 .color {
@@ -28,7 +37,7 @@
 #instructions {
   color: gray;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 5vw;
+  font-size: 4vw;
   font-weight: bold;
   margin: auto;
   margin-top: 5%;
@@ -39,18 +48,18 @@
 #score {
   color: whitesmoke;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 12vw;
+  font-size: 6vw;
   font-weight: bolder;
 }
 
 .score-board {
   background-color: #0432FF;
   border-radius: 50%;
-  height: 30vw;
-  line-height: 30vw;
+  height: 15vw;
+  line-height: 15vw;
   left: 35%;
   margin-top: -5%;
   position: relative;
   text-align: center;
-  width: 30vw;
+  width: 15vw;
 }
