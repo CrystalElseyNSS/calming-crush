@@ -1,3 +1,7 @@
+body {
+  background-color: #1E1E1E;
+}
+
 .container {
   display: flex;
   flex-wrap: nowrap;
@@ -21,7 +25,7 @@
 }
 
 .info {
-  width: 50vw;
+  width: 45vw;
 }
 
 .color {
@@ -35,9 +39,9 @@
 }
 
 #instructions {
-  color: gray;
+  color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 4vw;
+  font-size: 3.5vw;
   font-weight: bold;
   margin: auto;
   margin-top: 5%;
