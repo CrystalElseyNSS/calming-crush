@@ -43,10 +43,9 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 3.5vw;
   font-weight: bold;
-  margin: auto;
-  margin-top: 5%;
+  margin: 7% auto;
   text-align: center;
-  width: 88%;
+  width: 72%;
 }
 
 #score {
