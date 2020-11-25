@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     squares[squareIdBeingDragged].style.backgroundImage = colorBeingReplaced
     count += 1
     console.log(count)
-    if ( count > 1 ) {
+    if ( count > 10 ) {
       endGame()
     }
   }
