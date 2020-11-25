@@ -1,5 +1,11 @@
+@font-face {
+  font-family: arcade;
+  src: url(./ARCADECLASSIC.TTF);
+}
+
 body {
   background-color: #1E1E1E;
+  font-family: arcade;
 }
 
 .container {
@@ -12,10 +18,13 @@ body {
   background-color: white;
   border: 1px outset whitesmoke;
   border-radius: 10px;
+  color: red;
   display: flex;
   flex-wrap: wrap;
+  font-size: 20vw;
   height: 50vw;
   padding: 3px;
+  text-align: center;
   width: 50vw;
 }
 
@@ -40,9 +49,8 @@ body {
 
 #instructions {
   color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 3.5vw;
-  font-weight: bold;
+  font-size: 4.25vw;
+  letter-spacing: 2px;
   margin: 7% auto;
   text-align: center;
   width: 72%;
@@ -50,7 +58,6 @@ body {
 
 #score {
   color: whitesmoke;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 6vw;
   font-weight: bolder;
 }
@@ -65,4 +72,12 @@ body {
   position: relative;
   text-align: center;
   width: 15vw;
+}
+
+#gameOver {
+  color: whitesmoke;
+  font-size: 4vw;
+  letter-spacing: 2px;
+  padding: 4%;
+  text-align: center;
 }

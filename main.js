@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.grid')
+  const brush = document.querySelector('.color')
+  const instructions = document.getElementById('instructions')
   const scoreDisplay = document.getElementById('score')
+  const gameOver = document.getElementById('gameOver')
   const width = 8
   const squares = []
   let score = 0
@@ -57,11 +60,29 @@ document.addEventListener('DOMContentLoaded', () => {
     this.style.backgroundImage = ''
   }
 
+  let count = 0
+
+  function endGame() {
+    console.log(score)
+    // brush.style.display = "none"
+    instructions.style.display = "none"
+    $.post(`https://us-central1-leo-arcade.cloudfunctions.net/addIFramePoints?points=${score}&game=crush` , function(data, status)
+    {
+      gameOver.innerHTML = `${score} points added to your score! Go on, check the leaderboard. Check it. I dare ya.`
+      grid.innerHTML = "GAME OVER"
+    })
+  }
+
   function dragDrop() {
     colorBeingReplaced = this.style.backgroundImage
     squareIdBeingReplaced = parseInt(this.id)
     this.style.backgroundImage = colorBeingDragged
     squares[squareIdBeingDragged].style.backgroundImage = colorBeingReplaced
+    count += 1
+    console.log(count)
+    if ( count > 1 ) {
+      endGame()
+    }
   }
 
   function dragEnd() {
