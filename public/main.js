@@ -62,13 +62,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let count = 0
 
+  const player = window.location.pathname.split("/").pop()
+
   function endGame() {
-    console.log(score)
-    // brush.style.display = "none"
     instructions.style.display = "none"
-    $.post(`https://us-central1-leo-arcade.cloudfunctions.net/addIFramePoints?points=${score}&game=crush` , function(data, status)
+    $.post(`https://us-central1-leo-arcade.cloudfunctions.net/addPoints?points=${score}&player=${player}` , function(data, status)
     {
-      gameOver.innerHTML = `${score} points added to your score! Go on, check the leaderboard. Check it. I dare ya.`
+      gameOver.innerHTML = `${score} points added to your score! Visit the leaderboard to see your points!`
       grid.innerHTML = "GAME OVER"
     })
   }
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     squares[squareIdBeingDragged].style.backgroundImage = colorBeingReplaced
     count += 1
     console.log(count)
-    if ( count > 10 ) {
+    if ( count > 9 ) {
       endGame()
     }
   }
