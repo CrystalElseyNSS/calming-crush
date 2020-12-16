@@ -9,12 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
   let score = 0
 
   const colors = [
-    'url(https://eventfinity-production-assets.s3.amazonaws.com/materials/679091/original/red.png)',
-    'url(https://eventfinity-production-assets.s3.amazonaws.com/materials/679071/original/pink.png)',
-    'url(https://eventfinity-production-assets.s3.amazonaws.com/materials/679051/original/orange.png)',
-    'url(https://eventfinity-production-assets.s3.amazonaws.com/materials/679081/original/purple.png)',
-    'url(https://eventfinity-production-assets.s3.amazonaws.com/materials/679041/original/green.png)',
-    'url(https://eventfinity-production-assets.s3.amazonaws.com/materials/679061/original/blue.png)'
+    'url(https://eventfinity-production-assets.s3.amazonaws.com/materials/679091/original/Red-Brush.png)',
+    'url(https://eventfinity-production-assets.s3.amazonaws.com/materials/679071/original/Pink-Brush.png)',
+    'url(https://eventfinity-production-assets.s3.amazonaws.com/materials/679051/original/Yellow-Brush.png)',
+    'url(https://eventfinity-production-assets.s3.amazonaws.com/materials/679081/original/Purple-Brush.png)',
+    'url(https://eventfinity-production-assets.s3.amazonaws.com/materials/679041/original/Green-Brush.jpg)',
+    'url(https://eventfinity-production-assets.s3.amazonaws.com/materials/679061/original/Blue-Brush.png)'
   ]
 
   function createBoard() {

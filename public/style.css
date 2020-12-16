@@ -1,11 +1,6 @@
-@font-face {
-  font-family: arcade;
-  src: url(./ARCADECLASSIC.TTF);
-}
-
 body {
   background-color: #1E1E1E;
-  font-family: arcade;
+  font-family: 'Arial Black';
 }
 
 .container {
@@ -21,7 +16,7 @@ body {
   color: red;
   display: flex;
   flex-wrap: wrap;
-  font-size: 20vw;
+  font-size: 12vw;
   height: 50vw;
   padding: 3px;
   text-align: center;
@@ -49,7 +44,7 @@ body {
 
 #instructions {
   color: white;
-  font-size: 4.25vw;
+  font-size: 3.25vw;
   letter-spacing: 2px;
   margin: 7% auto;
   text-align: center;
@@ -76,7 +71,7 @@ body {
 
 #gameOver {
   color: whitesmoke;
-  font-size: 4vw;
+  font-size: 3vw;
   letter-spacing: 2px;
   padding: 4%;
   text-align: center;
