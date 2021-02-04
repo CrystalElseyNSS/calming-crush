@@ -1,5 +1,14 @@
 {
   "projects": {
-    "default": "sw-color-crush"
+    "default": "sw-leaderboard"
+  },
+  "targets": {
+    "sw-leaderboard": {
+      "hosting": {
+        "crush": [
+          "sw-color-crush-game"
+        ]
+      }
+    }
   }
 }

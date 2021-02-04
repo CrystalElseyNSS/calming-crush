@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "target": "crush",
     "public": "public",
     "ignore": [
       "firebase.json",
