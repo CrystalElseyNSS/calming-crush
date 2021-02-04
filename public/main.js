@@ -60,10 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
       this.style.backgroundImage = ''
     }
 
-    let count = 0
-    if ( count >= 10 ) { endGame() }
-    if ( count > 9 ) { endGame() }
-
     const urlParams = window.location.pathname.split("-")
     const boothToTrim = urlParams[0]
     const booth = boothToTrim.substring(1)
@@ -72,35 +68,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const endGame = () => {
         grid.innerHTML = "GAME OVER"
-        console.log("game over")
         instructions.style.display = "none"
-            fetch(`https://us-central1-sw-leaderboard.cloudfunctions.net/checkPlatinumStatusFromGame?attendee=${attendee}`, {
-            success: function(data, status) {
+        fetch(`https://us-central1-sw-leaderboard.cloudfunctions.net/checkPlatinumStatusFromGame?attendee=${attendee}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log("data: " + data)
                 if ( data === false ) {
                     gameOver.innerHTML = 'You must visit all Platinum booths before being eligible to win points'
                     grid.innerHTML = "GAME OVER"
-                } else if ( data === true ) {
+                } else if (data === true) {
                     gameOver.innerHTML = `${score} points added to your score! Visit the leaderboard to see your points!`
-                    grid.innerHTML = "GAME OVER"
-                    return fetch(`https://us-central1-sw-leaderboard.cloudfunctions.net/addPoints?points=${score}&attendee=${attendee}&awarded=${awarded}`, {
-                        complete: function(data, status) {
-                            console.log(status + ": " + data)
-                        }
-                    })
-                } else {
-                    console.log("Error getting platinum status")
+                    return fetch(`https://us-central1-sw-leaderboard.cloudfunctions.net/addPoints?points=${score}&attendee=${attendee}&awarded=${awarded}`)
+                    .then(response => response.json())
                 }
-            }
-        })
+            })
     }  
       
+    let count = 0
     function dragDrop() {
-      colorBeingReplaced = this.style.backgroundImage
-      squareIdBeingReplaced = parseInt(this.id)
-      this.style.backgroundImage = colorBeingDragged
-      squares[squareIdBeingDragged].style.backgroundImage = colorBeingReplaced
-      count += 1
-      console.log(count)
+        if ( count < 9) {
+            colorBeingReplaced = this.style.backgroundImage
+            squareIdBeingReplaced = parseInt(this.id)
+            this.style.backgroundImage = colorBeingDragged
+            squares[squareIdBeingDragged].style.backgroundImage = colorBeingReplaced
+            count += 1
+            console.log(count)
+        } else {
+            endGame()
+        }
     }
 
     function dragEnd() {
