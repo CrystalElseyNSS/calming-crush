@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(data => {
                 console.log("data: " + data)
                 if ( data === false ) {
-                    gameOver.innerHTML = "You are not yet eligible to earn points. Visit the leaderboard to view game rules!"
+                    gameOver.innerHTML = "Not yet eligible for points. Visit the leaderboard for rules!"
                     grid.innerHTML = "GAME OVER"
                 } else if (data === true) {
                     gameOver.innerHTML = `${score} points added! Visit the leaderboard to see your new score!`
