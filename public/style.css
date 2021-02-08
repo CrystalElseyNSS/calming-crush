@@ -44,11 +44,11 @@ body {
 
 #instructions {
   color: white;
-  font-size: 3.25vw;
+  font-size: 3vw;
   letter-spacing: 2px;
   margin: 7% auto;
   text-align: center;
-  width: 72%;
+  width: 78%;
 }
 
 #score {

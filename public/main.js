@@ -74,10 +74,10 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(data => {
                 console.log("data: " + data)
                 if ( data === false ) {
-                    gameOver.innerHTML = 'You must visit all Platinum booths before being eligible to win points'
+                    gameOver.innerHTML = "You are not yet eligible to earn points. Visit the leaderboard to view game rules!"
                     grid.innerHTML = "GAME OVER"
                 } else if (data === true) {
-                    gameOver.innerHTML = `${score} points added to your score! Visit the leaderboard to see your points!`
+                    gameOver.innerHTML = `${score} points added! Visit the leaderboard to see your new score!`
                     return fetch(`https://us-central1-sw-leaderboard.cloudfunctions.net/addPoints?points=${score}&attendee=${attendee}&awarded=${awarded}`)
                     .then(response => response.json())
                 }
