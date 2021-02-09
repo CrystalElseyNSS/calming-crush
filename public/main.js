@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const endGame = () => {
         grid.innerHTML = "GAME OVER"
         instructions.style.display = "none"
-        fetch(`https://us-central1-sw-leaderboard.cloudfunctions.net/checkPlatinumStatusFromGame?attendee=${attendee}`)
+        fetch(`https://us-central1-sw-leaderboard.cloudfunctions.net/checkPathStatusFromGame?attendee=${attendee}`)
             .then(response => response.json())
             .then(data => {
                 console.log("data: " + data)
