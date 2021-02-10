@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (notValid.includes(i)) continue
 
         if (rowOfFour.every(index => squares[index].style.backgroundImage === decidedColor && !isBlank)) {
-          score += 4
+          score += 30
           scoreDisplay.innerHTML = score
           rowOfFour.forEach(index => {
             squares[index].style.backgroundImage = ''
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const isBlank = squares[i].style.backgroundImage === ''
 
         if (columnOfFour.every(index => squares[index].style.backgroundImage === decidedColor && !isBlank)) {
-          score += 4
+          score += 30
           scoreDisplay.innerHTML = score
           columnOfFour.forEach(index => {
             squares[index].style.backgroundImage = ''
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (notValid.includes(i)) continue
 
         if (rowOfThree.every(index => squares[index].style.backgroundImage === decidedColor && !isBlank)) {
-          score += 3
+          score += 20
           scoreDisplay.innerHTML = score
           rowOfThree.forEach(index => {
             squares[index].style.backgroundImage = ''
@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const isBlank = squares[i].style.backgroundImage === ''
 
         if (columnOfThree.every(index => squares[index].style.backgroundImage === decidedColor && !isBlank)) {
-          score += 3
+          score += 20
           scoreDisplay.innerHTML = score
           columnOfThree.forEach(index => {
             squares[index].style.backgroundImage = ''
