@@ -1,20 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.querySelector('.grid')
-    const brushes = document.querySelectorAll('.color')
     const instructions = document.getElementById('instructions')
+    const scoreBoard = document.getElementById('score-board')
     const scoreDisplay = document.getElementById('score')
-    const gameOver = document.getElementById('gameOver')
     const width = 8
     const squares = []
     let score = 0
 
     const colors = [
-      'url(https://eventfinity-production-assets.s3.amazonaws.com/materials/679091/original/Red-Brush.png)',
-      'url(https://eventfinity-production-assets.s3.amazonaws.com/materials/679071/original/Pink-Brush.png)',
-      'url(https://eventfinity-production-assets.s3.amazonaws.com/materials/679051/original/Yellow-Brush.png)',
-      'url(https://eventfinity-production-assets.s3.amazonaws.com/materials/679081/original/Purple-Brush.png)',
-      'url(https://eventfinity-production-assets.s3.amazonaws.com/materials/679041/original/Green-Brush.jpg)',
-      'url(https://eventfinity-production-assets.s3.amazonaws.com/materials/679061/original/Blue-Brush.png)'
+      'url(https://eventfinity-production-assets.s3.amazonaws.com/materials/1148991/original/brown.png)',
+      'url(https://eventfinity-production-assets.s3.amazonaws.com/materials/1149011/original/pink.jpeg)',
+      'url(https://eventfinity-production-assets.s3.amazonaws.com/materials/1149021/original/yellow.png)',
+      'url(https://eventfinity-production-assets.s3.amazonaws.com/materials/1149051/original/mauve.jpeg)',
+      'url(https://eventfinity-production-assets.s3.amazonaws.com/materials/1149001/original/green.png)',
+      'url(https://eventfinity-production-assets.s3.amazonaws.com/materials/1149031/original/blue.png)'
     ]
 
     function createBoard() {
@@ -63,36 +62,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const urlParams = window.location.pathname.split("-")
     const boothToTrim = urlParams[0]
     const booth = boothToTrim.substring(1)
-    const attendee = urlParams[1]
-    const awarded = booth + 'colorcrush'
 
     const endGame = () => {
-        grid.innerHTML = "GAME OVER"
+        grid.innerHTML = 'Thank you for playing!'
+        grid.style.backgroundColor = "transparent"
+        grid.style.height = "unset"
         instructions.style.display = "none"
-        fetch(`https://us-central1-sw-leaderboard.cloudfunctions.net/checkPathStatusFromGame?attendee=${attendee}`)
-            .then(response => response.json())
-            .then(data => {
-                console.log("data: " + data)
-                if ( data === false ) {
-                    gameOver.innerHTML = "Not yet eligible for points. Visit the leaderboard for rules!"
-                    grid.innerHTML = "GAME OVER"
-                } else if (data === true) {
-                    gameOver.innerHTML = `${score} points added! Visit the leaderboard to see your new score!`
-                    return fetch(`https://us-central1-sw-leaderboard.cloudfunctions.net/addPoints?points=${score}&attendee=${attendee}&awarded=${awarded}`)
-                    .then(response => response.json())
-                }
-            })
+        scoreBoard.style.height = "100%"
     }  
       
     let count = 0
     function dragDrop() {
-        if ( count < 9) {
+        if ( count < 19) {
             colorBeingReplaced = this.style.backgroundImage
             squareIdBeingReplaced = parseInt(this.id)
             this.style.backgroundImage = colorBeingDragged
             squares[squareIdBeingDragged].style.backgroundImage = colorBeingReplaced
             count += 1
-            console.log(count)
         } else {
             endGame()
         }

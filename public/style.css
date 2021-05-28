@@ -1,31 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
 body {
-  background-color: #1E1E1E;
-  font-family: 'Arial Black';
+  background-color: #f5eadf;
+  font-family: 'Raleway', sans-serif;
 }
 
 .container {
   display: flex;
   flex-wrap: nowrap;
   width: 100vw;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .grid {
-  background-color: white;
-  border: 1px outset whitesmoke;
-  border-radius: 10px;
-  color: red;
+  background-color: whitesmoke;
+  color: #CA9D9D;
   display: flex;
   flex-wrap: wrap;
-  font-size: 12vw;
-  height: 50vw;
+  font-size: 5vw;
+  height: 40vw;
   padding: 3px;
   text-align: center;
-  width: 50vw;
+  width: 40vw;
 }
 
 .grid div {
-  height: 12.5%;
-  width: 12.5%;
+  height: 10.5%;
+  width: 10.5%;
+  margin: 1%;
 }
 
 .info {
@@ -43,10 +47,10 @@ body {
 }
 
 #instructions {
-  color: white;
-  font-size: 3vw;
+  color: #CA9D9D;
+  font-size: 2.5vw;
   letter-spacing: 2px;
-  margin: 7% auto;
+  margin: auto;
   text-align: center;
   width: 78%;
 }
@@ -57,8 +61,8 @@ body {
   font-weight: bolder;
 }
 
-.score-board {
-  background-color: #0432FF;
+#score-board {
+  background-color: #aec0cf;
   border-radius: 50%;
   height: 15vw;
   line-height: 15vw;
@@ -69,10 +73,9 @@ body {
   width: 15vw;
 }
 
-#gameOver {
+#play-again {
+  background-color: #CA9D9D;
   color: whitesmoke;
-  font-size: 3vw;
-  letter-spacing: 2px;
-  padding: 4%;
-  text-align: center;
+  border-radius: 5px;
+  display: none;
 }

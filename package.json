@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "use-sound": "^3.0.1"
   }
 }
