@@ -2,6 +2,8 @@
 
 Candy Crush-style game with calming scenescapes
 
+![](https://eventfinity-production-assets.s3.amazonaws.com/materials/1149091/original/crush.png)
+
 
 ## Installation
 
